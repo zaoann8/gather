@@ -10,6 +10,10 @@ concurrency:
   group: ${{ github.ref }}-${{ github.workflow }}
   cancel-in-progress: true
 
+permissions:
+  contents: read
+  packages: write
+
 env:
   REGISTRY_IMAGE: ghcr.io/${{ github.repository_owner }}/subconverter
 
